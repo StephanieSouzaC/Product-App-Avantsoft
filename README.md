@@ -18,7 +18,7 @@
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Funcionalidades](#funcionalidades)
 - [Como rodar o projeto com Docker](#como-rodar-o-projeto-com-docker)
-- [Como rodar o projeto sem Docker~](#como-rodar-o-projeto-sem-docker)
+- [Como rodar o projeto - versão alternativa](#como-rodar-o-projeto-sem-docker)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Desenvolvedora](#desenvolvedora)
 
@@ -79,9 +79,9 @@ docker-compose up --build
 - Backend API: http://localhost:3001
 
 ---
-## Como rodar sem Docker
+## Como rodar - versão alternativa
 
-Se preferir rodar o projeto localmente sem usar Docker, siga os passos abaixo para o backend e frontend.
+Se preferir rodar o projeto localmente de outra maneira, siga os passos abaixo para o backend e frontend.
 
 1. Clone o repositório
 
