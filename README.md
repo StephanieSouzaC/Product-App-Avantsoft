@@ -29,13 +29,6 @@
 Aplicação fullstack para cadastro de produtos, desenvolvida com React no frontend e NestJS no backend. Permite criar e editar produtos com nome, SKU e preço. Os dados são armazenados em um banco PostgreSQL e a aplicação é totalmente containerizada com Docker.
 </p>
 
-
----
-
-## 📝 Descrição do Projeto
-
-Aplicação FullStack com backend em NestJS + Prisma + PostgreSQL e frontend em React + Next.js. Permite cadastrar, listar, editar e remover produtos, exibindo também a primeira letra do alfabeto ausente no nome de cada produto.
-
 ---
 
 ## ✅ Funcionalidades
