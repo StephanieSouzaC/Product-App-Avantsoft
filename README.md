@@ -59,8 +59,8 @@ Aplicação fullstack para cadastro de produtos, desenvolvida com React no front
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
+cd Product-App-Avantsoft
 ```
 
 2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo):
@@ -82,6 +82,13 @@ docker-compose up --build
 ## Como rodar sem Docker
 
 Se preferir rodar o projeto localmente sem usar Docker, siga os passos abaixo para o backend e frontend.
+
+1. Clone o repositório
+
+```bash
+git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
+cd Product-App-Avantsoft
+```
 
 ### Backend (product-api)
 
