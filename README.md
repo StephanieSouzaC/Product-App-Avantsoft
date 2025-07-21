@@ -123,7 +123,7 @@ O backend estará disponível em http://localhost:3001
 
 --
 ### FrontEnd (product-web)
-
+Abra um novo terminal (mantenha o backend rodando)
 1.Entre na pasta do frontend:
 ```bash
 cd product-web
