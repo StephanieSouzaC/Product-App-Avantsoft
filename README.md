@@ -11,19 +11,15 @@
 
 > Status do Projeto: ✔️ Finalizado.
 
-### Tópicos 
+---
 
-:small_blue_diamond: [Descrição do Projeto](#descrição-do-projeto)
+### 📚 Tópicos
 
-:small_blue_diamond: [Funcionalidades](#funcionalidades)
-
-:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-docker)
-
-:small_blue_diamond: [Layout da aplicação](#layout-da-aplicação)
-
-:small_blue_diamond: [Tecnologias utilizadas](#tecnologias-utilizadas-books)
-
-:small_blue_diamond: [Desenvolvedor](#desenvolvedor-octocat)
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Como rodar o projeto com Docker](#como-rodar-o-projeto-com-docker)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Desenvolvedora](#desenvolvedora)
 
 ---
 
@@ -33,52 +29,81 @@
 Aplicação fullstack para cadastro de produtos, desenvolvida com React no frontend e NestJS no backend. Permite criar e editar produtos com nome, SKU e preço. Os dados são armazenados em um banco PostgreSQL e a aplicação é totalmente containerizada com Docker.
 </p>
 
+
 ---
 
-## Funcionalidades
+## 📝 Descrição do Projeto
 
-:heavy_check_mark: Cadastro de produto com nome, SKU e preço;  
-:heavy_check_mark: Validação obrigatória de todos os campos;  
-:heavy_check_mark: Edição de produto existente com dados pré-carregados;  
-:heavy_check_mark: Integração com API RESTful via Axios;  
-:heavy_check_mark: Persistência de dados via Prisma + PostgreSQL.
+Aplicação FullStack com backend em NestJS + Prisma + PostgreSQL e frontend em React + Next.js. Permite cadastrar, listar, editar e remover produtos, exibindo também a primeira letra do alfabeto ausente no nome de cada produto.
+
+---
+
+## ✅ Funcionalidades
+
+### 🔧 Backend (NestJS + Prisma)
+
+- **POST /products**: Cria um produto com nome, preço e SKU.
+- **GET /products**: Retorna todos os produtos ordenados por nome.
+- **GET /products/:id**: Retorna os dados de um produto específico.
+- **PUT /products/:id**: Atualiza os dados de um produto.
+- **DELETE /products/:id**: Remove um produto.
+- Todos os produtos retornam também o campo `missingLetter`, que indica a primeira letra do alfabeto ausente no nome.
+
+### 💻 Frontend (React + Next.js)
+
+- Formulário para cadastrar produto.
+- Listagem ordenada por nome.
+- Visualização da letra ausente.
+- Exclusão de produtos.
 
 ---
 
 ## Como rodar a aplicação (Docker) 🐳
 
-### Pré-requisitos:
-- Docker e Docker Compose instalados
+> Pré-requisitos: [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado.
 
-### Passos:
+### 1. Clone o repositório
 
-1. Clone o repositório:
 ```bash
-git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
-cd Product-App-Avantsoft
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 ```
 
 2. Iniciar o projeto completo:
 ```bash
+docker-compose down -v
 docker-compose up --build
 ```
 
 3. Acessar no navegador:
 - Frontend: http://localhost:3000
+- Backend API: http://localhost:3001
 
+## 🧪 Testes Automatizados
+### Rodar localmente:
+
+```bash
+npm run test
+```
 
 ---
-Linguagens, dependências e libs utilizadas :books:
-- NestJS
-- Prisma
-- PostgreSQL
-- Next.js
-- React
-- Axios
-- Docker
-- Jest
-- React
-- Class Validator
+## 📦 Tecnologias utilizadas
 
----Desenvolvedora :octocat:
-<img src="https://github.com/StephanieSouzaC.png" width=200><br><p>Stephanie Souza</p>
+- [NestJS](https://nestjs.com/)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Prisma ORM](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
+- [Jest](https://jestjs.io/)
+- [Supertest](https://www.npmjs.com/package/supertest)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 👩‍💻 Desenvolvedora
+
+[![Stephanie Souza GitHub](https://github.com/StephanieSouzaC.png?size=100)](https://github.com/StephanieSouzaC)
+
+**Stephanie Souza**  
+[🔗 LinkedIn](https://www.linkedin.com/in/stephanie-souza-83a18b239)
