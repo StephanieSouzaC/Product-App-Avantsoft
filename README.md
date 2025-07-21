@@ -18,6 +18,7 @@
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Funcionalidades](#funcionalidades)
 - [Como rodar o projeto com Docker](#como-rodar-o-projeto-com-docker)
+- [Como rodar o projeto sem Docker~](#como-rodar-o-projeto-sem-docker)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Desenvolvedora](#desenvolvedora)
 
@@ -62,7 +63,12 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
 
-2. Iniciar o projeto completo:
+2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo):
+```bash
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
+```
+
+3. Iniciar o projeto completo:
 ```bash
 docker-compose down -v
 docker-compose up --build
@@ -71,6 +77,57 @@ docker-compose up --build
 3. Acessar no navegador:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:3001
+
+---
+## Como rodar sem Docker
+
+Se preferir rodar o projeto localmente sem usar Docker, siga os passos abaixo para o backend e frontend.
+
+### Backend (product-api)
+
+1. Entre na pasta do backend:
+
+```bash
+cd product-api
+```
+2. Instale as dependências
+
+```bash
+npm install
+```
+3. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo):
+```bash
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
+```
+4. Certifique-se de que o PostgreSQL está rodando localmente na porta 5432 e o banco product_dev existe.
+5. Execute as migrações para criar as tabelas:
+```bash
+npx prisma generate
+npx prisma migrate deploy
+```
+6. Inicie o backend em modo de desenvolvimento:
+```bash
+npm run start:dev
+```
+O backend estará disponível em http://localhost:3001
+
+### FrontEnd (product-web)
+
+1.Entre na pasta do frontend:
+```bash
+cd product-web
+```
+2. Instale as dependências:
+```bash
+npm install
+```
+3.Inicie o frontend em modo de desenvolvimento:
+```bash
+npm run dev
+```
+
+O frontend estará disponível em http://localhost:3000.
+---
 
 ## 🧪 Testes Automatizados
 ### Rodar localmente:
