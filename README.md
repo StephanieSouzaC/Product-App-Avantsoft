@@ -63,7 +63,7 @@ git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
 cd Product-App-Avantsoft
 ```
 
-2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo):
+2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo) na pasta product-api:
 ```bash
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
 ```
@@ -102,7 +102,7 @@ cd product-api
 ```bash
 npm install
 ```
-3. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo):
+3. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo) na pasta product-api:
 ```bash
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
 ```
