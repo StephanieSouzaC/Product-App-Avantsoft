@@ -17,8 +17,7 @@
 
 - [Descrição do Projeto](#descrição-do-projeto)
 - [Funcionalidades](#funcionalidades)
-- [Como rodar o projeto com Docker](#como-rodar-o-projeto-com-docker)
-- [Como rodar o projeto - versão alternativa](#como-rodar-o-projeto-sem-docker)
+- [Como rodar o projeto](#como-rodar-o-projeto-sem-docker)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Desenvolvedora](#desenvolvedora)
 
@@ -52,38 +51,11 @@ Aplicação fullstack para cadastro de produtos, desenvolvida com React no front
 
 ---
 
-## Como rodar a aplicação (Docker) 🐳
+## Como rodar a aplicação
 
 > Pré-requisitos: [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado.
 
 ### 1. Clone o repositório
-
-```bash
-git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
-cd Product-App-Avantsoft
-```
-
-2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo) na pasta product-api:
-```bash
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
-```
-
-3. Iniciar o projeto completo:
-```bash
-docker-compose down -v
-docker-compose up --build
-```
-
-3. Os ambientes estarão rodando em:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:3001
-
----
-## Como rodar - versão alternativa
-
-Se preferir rodar o projeto localmente de outra maneira, siga os passos abaixo para o backend e frontend.
-
-1. Clone o repositório
 
 ```bash
 git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
