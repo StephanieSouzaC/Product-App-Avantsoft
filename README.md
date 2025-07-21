@@ -74,7 +74,7 @@ docker-compose down -v
 docker-compose up --build
 ```
 
-3. Acessar no navegador:
+3. Os ambientes estarão rodando em:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:3001
 
