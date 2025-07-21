@@ -106,8 +106,11 @@ npm install
 ```bash
 DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
 ```
-4. Certifique-se de que o PostgreSQL está rodando localmente na porta 5432 e o banco product_dev existe.
-5. Execute as migrações para criar as tabelas:
+4. Suba o banco de dados com Docker Compose:
+ ```bash
+docker-compose up -d
+```  
+6. Execute as migrações para criar as tabelas:
 ```bash
 npx prisma generate
 npx prisma migrate deploy
