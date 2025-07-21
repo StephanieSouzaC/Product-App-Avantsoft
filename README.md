@@ -11,19 +11,16 @@
 
 > Status do Projeto: ✔️ Finalizado.
 
-### Tópicos 
+---
 
-:small_blue_diamond: [Descrição do Projeto](#descrição-do-projeto)
+### 📚 Tópicos
 
-:small_blue_diamond: [Funcionalidades](#funcionalidades)
-
-:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-docker)
-
-:small_blue_diamond: [Layout da aplicação](#layout-da-aplicação)
-
-:small_blue_diamond: [Tecnologias utilizadas](#tecnologias-utilizadas-books)
-
-:small_blue_diamond: [Desenvolvedor](#desenvolvedor-octocat)
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Como rodar o projeto com Docker](#como-rodar-o-projeto-com-docker)
+- [Como rodar o projeto sem Docker~](#como-rodar-o-projeto-sem-docker)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Desenvolvedora](#desenvolvedora)
 
 ---
 
@@ -35,50 +32,140 @@ Aplicação fullstack para cadastro de produtos, desenvolvida com React no front
 
 ---
 
-## Funcionalidades
+## ✅ Funcionalidades
 
-:heavy_check_mark: Cadastro de produto com nome, SKU e preço;  
-:heavy_check_mark: Validação obrigatória de todos os campos;  
-:heavy_check_mark: Edição de produto existente com dados pré-carregados;  
-:heavy_check_mark: Integração com API RESTful via Axios;  
-:heavy_check_mark: Persistência de dados via Prisma + PostgreSQL.
+### 🔧 Backend (NestJS + Prisma)
+
+- **POST /products**: Cria um produto com nome, preço e SKU.
+- **GET /products**: Retorna todos os produtos ordenados por nome.
+- **GET /products/:id**: Retorna os dados de um produto específico.
+- **PUT /products/:id**: Atualiza os dados de um produto.
+- **DELETE /products/:id**: Remove um produto.
+- Todos os produtos retornam também o campo `missingLetter`, que indica a primeira letra do alfabeto ausente no nome.
+
+### 💻 Frontend (React + Next.js)
+
+- Formulário para cadastrar produto.
+- Listagem ordenada por nome.
+- Visualização da letra ausente.
+- Exclusão de produtos.
 
 ---
 
 ## Como rodar a aplicação (Docker) 🐳
 
-### Pré-requisitos:
-- Docker e Docker Compose instalados
+> Pré-requisitos: [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado.
 
-### Passos:
+### 1. Clone o repositório
 
-1. Clone o repositório:
 ```bash
 git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
 cd Product-App-Avantsoft
 ```
 
-2. Iniciar o projeto completo:
+2. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo) na pasta product-api:
 ```bash
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
+```
+
+3. Iniciar o projeto completo:
+```bash
+docker-compose down -v
 docker-compose up --build
 ```
 
 3. Acessar no navegador:
 - Frontend: http://localhost:3000
-
+- Backend API: http://localhost:3001
 
 ---
-Linguagens, dependências e libs utilizadas :books:
-- NestJS
-- Prisma
-- PostgreSQL
-- Next.js
-- React
-- Axios
-- Docker
-- Jest
-- React
-- Class Validator
+## Como rodar sem Docker
 
----Desenvolvedora :octocat:
-<img src="https://github.com/StephanieSouzaC.png" width=200><br><p>Stephanie Souza</p>
+Se preferir rodar o projeto localmente sem usar Docker, siga os passos abaixo para o backend e frontend.
+
+1. Clone o repositório
+
+```bash
+git clone https://github.com/StephanieSouzaC/Product-App-Avantsoft.git
+cd Product-App-Avantsoft
+```
+
+### Backend (product-api)
+
+1. Entre na pasta do backend:
+
+```bash
+cd product-api
+```
+2. Instale as dependências
+
+```bash
+npm install
+```
+3. Configure a variável de ambiente do banco de dados no arquivo .env (exemplo) na pasta product-api:
+```bash
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/product_dev
+```
+4. Suba o banco de dados com Docker Compose:
+ ```bash
+docker-compose up -d
+```  
+6. Execute as migrações para criar as tabelas:
+```bash
+npx prisma generate
+npx prisma migrate deploy
+```
+6. Inicie o backend em modo de desenvolvimento:
+```bash
+npm run start:dev
+```
+O backend estará disponível em http://localhost:3001
+
+--
+### FrontEnd (product-web)
+Abra um novo terminal (mantenha o backend rodando)
+1.Entre na pasta do frontend:
+```bash
+cd product-web
+```
+2. Instale as dependências:
+```bash
+npm install
+```
+3.Inicie o frontend em modo de desenvolvimento:
+```bash
+npm run dev
+```
+
+O frontend estará disponível em http://localhost:3000.
+
+---
+
+## 🧪 Testes Automatizados
+### Rodar localmente:
+
+```bash
+npm run test
+```
+
+---
+## 📦 Tecnologias utilizadas
+
+- [NestJS](https://nestjs.com/)
+- [React.js](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Prisma ORM](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
+- [Jest](https://jestjs.io/)
+- [Supertest](https://www.npmjs.com/package/supertest)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## :octocat: Desenvolvedora
+
+[![Stephanie Souza GitHub](https://github.com/StephanieSouzaC.png?size=100)](https://github.com/StephanieSouzaC)
+
+**Stephanie Souza**  
+[🔗 LinkedIn](https://www.linkedin.com/in/stephanie-souza-83a18b239)
