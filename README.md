@@ -94,7 +94,7 @@ npm run test
 
 ---
 
-## 👩‍💻 Desenvolvedora
+## :octocat: Desenvolvedora
 
 [![Stephanie Souza GitHub](https://github.com/StephanieSouzaC.png?size=100)](https://github.com/StephanieSouzaC)
 
