@@ -111,6 +111,7 @@ npm run start:dev
 ```
 O backend estará disponível em http://localhost:3001
 
+--
 ### FrontEnd (product-web)
 
 1.Entre na pasta do frontend:
@@ -127,6 +128,7 @@ npm run dev
 ```
 
 O frontend estará disponível em http://localhost:3000.
+
 ---
 
 ## 🧪 Testes Automatizados
